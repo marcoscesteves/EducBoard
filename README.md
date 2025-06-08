@@ -2,6 +2,11 @@
 
 **EducBoard** é um sistema simples e direto para gestão de turmas, professores e alunos, desenvolvido em PHP com MySQL. Ideal para instituições de ensino ou projetos educacionais que precisam organizar inscrições de forma eficiente.
 
+## 🎥 Demonstração
+
+[![Assista ao vídeo](https://img.youtube.com/vi/IYGEGUccX9E/0.jpg)](https://youtu.be/IYGEGUccX9E)
+
+
 ---
 
 ## 🚀 Funcionalidades
