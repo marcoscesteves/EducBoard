@@ -1,0 +1,133 @@
+button { 
+    margin: 10px;
+}
+
+.logo {
+    width: 150px;
+    margin: 10px;
+    height: 150px;
+}
+
+p.aviso-simples {
+    color: gray;
+}
+ 
+.tabela-centrada-e-margem-inf {
+    border-collapse: unset;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.tabela-com-itens-centrados td {
+    vertical-align: middle;
+}
+
+button.btn-excluir {
+    margin: 0;
+    padding: 10px;
+}
+
+
+table.tabela-com-itens-centrados span {
+    vertical-align: middle;
+}
+
+
+td.tdEspecifico {
+    width: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+td.tdEspecifico-excluir {
+    background-color: #DC3545;
+}
+
+td.tdEspecifico-incluir {
+    background-color: #a5c5ab;
+}
+
+
+a button.btn-menu-principal {
+    width: 200px;
+    margin: 0px;
+    border-radius: 0;
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+div.topo_cabecalho {
+    margin-bottom: 20px;
+    
+}
+
+div.topo_cabecalho img.esquerda {
+    float:left;
+}
+
+div.topo_cabecalho img.direita {
+    float:right;
+}
+
+
+div.topo_cabecalho_interno p, div.rodape p {
+    margin: 0;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+div.topo_cabecalho_interno {
+    background-color: #28a745;
+    opacity: 0.5;
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    
+}
+
+div.rodape {
+    background-color: #28a745;
+    opacity: 0.5;
+    padding: 20px;
+    color: white;
+    margin-top: 20px;
+    
+}
+
+div.DesabilitarInputEstudantes {
+    display: none;
+}
+
+div.HabilitarInputEstudantes {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+        margin: 10px;
+        height: 120px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+        margin: 5px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 350px) {
+    .logo {
+        width: 80px;
+        margin: 5px;
+        height: 80px;
+    }
+}
