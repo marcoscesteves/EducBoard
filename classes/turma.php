@@ -133,18 +133,7 @@ public function inscreverAlunoEmTurma($aluno_id) {
         $stmt->execute(); 
         return true;
     }
-    /*if ( $this->AlunoJaEstaInscritoNaTurma($aluno_id, $this->id) ) {
-        echo "<p> Prezado(a) Aluno(a), você já inscrito nesta turma! </p> ";
-        return false;
-    } else {
-        $query = "insert into vinculo_turma_alunos (aluno_id,turma_id) values (:aluno, :turma) ";
-        $conexao = Conexao::pegarConexao();
-        $stmt = $conexao->prepare($query);
-        $stmt->bindValue('aluno', $aluno_id);
-        $stmt->bindValue('turma', $this->id);
-        $stmt->execute(); 
-        return true;
-    }*/
+    
     
 }
     
@@ -188,15 +177,7 @@ public function retirarAlunoDeTurma(){
         $stmt->bindValue(':aluno', $_SESSION["id"]);
         $stmt->bindValue(':turma', $this->id);
         $stmt->execute(); 
-    /* echo "Turma criada com sucesso!";
-    echo "<a href=\"painel-principal.php\">
-           <button type=\"button\" class=\"btn btn-secondary\">Voltar ao Painel Principal</button> 
-           </a>
-           <a href=\"\">
-               <button type=\"button\" class=\"btn btn-warning\" >Sair
-               </button>
-           </a>";
-        return true;*/
+   
 }
     
 public function quantidadeDeAlunosIncritos($turma_id){
@@ -219,7 +200,7 @@ public function inserir(){
     $stmt->execute();
 
     $turmaCadastrada = $this->listarUltimaTurmaCadastrada();
-    //var_dump($turmaCadastrada);
+
     // Inserir professor na turma
     if (isset($this->professor1)) {                            
     	$this->inserirProfessorEmTurma($turmaCadastrada['id'], $this->professor1);
@@ -233,30 +214,9 @@ public function inserir(){
         $this->inserirProfessorEmTurma($turmaCadastrada['id'], $this->professor3);
     }
 
-
-    /*
-    // Inserir professor na turma
-    if (isset($this->professor1)) {
-    	$this->inserirProfessorEmTurma($this->id, $this->professor1);
-    }
-
-    if (isset($this->professor2)) {
-        $this->inserirProfessorEmTurma($this->id, $this->professor2);
-    }
-
-    if (isset($this->professor3)) {
-        $this->inserirProfessorEmTurma($this->id, $this->professor3);
-    }
-    */
     
-    echo "Turma criada com sucesso!";
-    echo "<a href=\"painel-principal.php\">
-           <button type=\"button\" class=\"btn btn-secondary\">Voltar ao Painel Principal</button> 
-           </a>
-           <a href=\"\">
-               <button type=\"button\" class=\"btn btn-warning\" >Sair
-               </button>
-           </a>";
+    //echo "Turma criada com sucesso!";
+    return "Turma criada com sucesso!";
 
 
 }

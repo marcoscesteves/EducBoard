@@ -1,7 +1,7 @@
 <div class="container rodape">
     <div class="row d-flex justify-content-center">
            <a href="#">
-               <button type="button" class="btn" > <i class="fas fa-chevron-left fa-2x text-light"></i>
+               <button type="button" class="btn" onclick="history.back()"> <i class="fas fa-chevron-left fa-2x text-light"></i>
                </button>
            </a>
            <a href="painel-principal.php">
@@ -12,7 +12,7 @@
                </button>
            </a>
            <a href="#">
-               <button type="button" class="btn" > <i class="fas fa-chevron-right fa-2x text-light"></i>
+               <button type="button" class="btn" onclick="history.forward()"> <i class="fas fa-chevron-right fa-2x text-light"></i>
                </button>
            </a>
            
