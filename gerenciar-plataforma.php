@@ -23,8 +23,20 @@ require_once 'cabecalho.php'; ?>
          </a>
 
 
-         <a href="criar-turmas.php">
+         <a href="turmas-criar.php">
              <button type="button" class="btn btn-success btn-menu-principal">Criar turma nova</button> 
+         </a>
+  </div>
+
+   <div class="row justify-content-center">
+         
+         <a href="professor-criar.php">
+             <button type="button" class="btn btn-success btn-menu-principal">Criar Professor</button> 
+         </a>
+
+
+         <a href="">
+             <button type="button" class="btn btn-success btn-menu-principal">(Em desenv)</button> 
          </a>
   </div>
   

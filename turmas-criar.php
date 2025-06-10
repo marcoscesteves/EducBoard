@@ -6,9 +6,7 @@ require_once 'cabecalho.php'; ?>
         <p>Preencha os dados abaixo:</p>
         
     <form action = "turma-criar-post.php" method="post" id="cadastroTurma">
-        
-
-            
+               
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Data:</span>

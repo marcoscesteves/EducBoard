@@ -39,8 +39,8 @@ require_once 'cabecalho.php' ?>
                </a>
 
             
-               <a href="gerenciar-turmas.php">
-                   <button type="button" class="btn btn-success btn-menu-principal">Gerenciar turmas</button> 
+               <a href="gerenciar-plataforma.php">
+                   <button type="button" class="btn btn-success btn-menu-principal">Configurações</button> 
                </a>
         </div>
         

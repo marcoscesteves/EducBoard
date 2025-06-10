@@ -15,8 +15,12 @@ CREATE TABLE Alunos (
 -- Tabela: Professores
 CREATE TABLE Professores (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255)
+    nome VARCHAR(255),
+    telefone VARCHAR(20),
+    cpf VARCHAR(14),
+    email VARCHAR(255)
 );
+
 
 -- Tabela: Turma
 CREATE TABLE Turma (
@@ -50,3 +54,8 @@ CREATE TABLE vinculo_turma_professor (
     FOREIGN KEY (professor_id) REFERENCES Professores(id),
     FOREIGN KEY (turma_id) REFERENCES Turma(id)
 );
+
+-- Criando perfil de administrador:
+INSERT INTO Alunos ( nome, email, administrador, senha) 
+VALUES 
+('Administrador', 'adm@educboard.com', 1, 'YWRt');

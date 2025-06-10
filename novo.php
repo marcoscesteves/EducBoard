@@ -109,7 +109,6 @@ require_once 'cabecalho.php';
         }
         
         
-        //console.log(document.querySelector(".custom-select").textContent);
         
     });
     

@@ -67,7 +67,11 @@ EducBoard/
      ```
      http://localhost/educboard/
      ```
-
+5. **Mude a senha do administrador**:
+   - Ao executar o script na etapa 2 (criar_tabelas.sql) um usuário de administrador
+     é criado com uma senha default. Favor alterar esta senha logo nesta etapa:
+     e-mail: adm@educboard.com
+     senha: adm
 
 ---
 
