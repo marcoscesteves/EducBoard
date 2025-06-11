@@ -20,17 +20,19 @@
    
    <div class="row d-flex justify-content-center">
    
+   <!--
    <img src="img/logoUFRJ.jpeg" class="logo">
    <img src="img/logoCrux.jpg" class="logo">
    <img src="img/logoIFF.jpg " alt="" class="logo">
-   
+    -->
+   <img src="img/logoEducBoard.png" alt="Logo da Plataforma"  class="logoRetangular">
         
     </div> 
         
    <div class="row">
          
    <div class="topo_cabecalho_interno d-flex justify-content-center">
-      <p>CRUX</p>     
+      <p>Escola de Exemplo</p>     
    </div> 
    
     </div>

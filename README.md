@@ -73,6 +73,9 @@ EducBoard/
      e-mail: adm@educboard.com
      senha: adm
 
+6. **Configurar a mesangem de confirmação para os alunos:**
+   - A mensagem aparece no momento em que o aluno/usuário pretende se inscrever numa turma. A ideia é colocar as regras para a turma ou demais informações que precisam ser oferecidas. Vale ressaltar que essa mensagem é padrão para todas as turmas.
+   
 ---
 
 ## 🤝 Contribuindo

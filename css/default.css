@@ -8,6 +8,11 @@ button {
     height: 150px;
 }
 
+.logoRetangular {
+    width: auto;
+    height: 150px;
+}
+
 p.aviso-simples {
     color: gray;
 }
