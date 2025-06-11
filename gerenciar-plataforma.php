@@ -34,9 +34,8 @@ require_once 'cabecalho.php'; ?>
              <button type="button" class="btn btn-success btn-menu-principal">Criar Professor</button> 
          </a>
 
-
-         <a href="">
-             <button type="button" class="btn btn-success btn-menu-principal">(Em desenv)</button> 
+         <a href="turma-mensagem-padrao.php">
+             <button type="button" class="btn btn-success btn-menu-principal">Mensagem Padrão</button> 
          </a>
   </div>
   

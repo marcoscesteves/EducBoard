@@ -1,5 +1,6 @@
 <?php require 'auto_load.php'; 
 $titulo = 'Confirmar inscrições';
+require_once 'classes/conexao.php';
 require_once 'cabecalho.php' ?>
 
    
@@ -8,7 +9,7 @@ require_once 'cabecalho.php' ?>
 
 
         <div class="row justify-content-center">
-            <ul>
+        <!--    <ul>
                 <li>Cada aula tem 45 minutos de duração.</li>
                 <li>Cada aluno terá direito a no máximo 4 aulas durante todo o curso, sendo as mesmas em dias distintos. </li> 
                 <li>Cada pessoa poderá marcar apenas um horário por dia.</li>       
@@ -29,6 +30,31 @@ require_once 'cabecalho.php' ?>
                     COAstro, contate-nos por e-mail: clubedeastronomiacrux@gmail.com. </li>
                 <li>Curta a página do clube no Instagram: @clubedeastronomiacrux. </li>
                 <li>O coordenador do COAstro é o Prof. Dr. Luis Juracy Rangel Lemos. </li>
+            </ul>
+
+            -->
+
+            <?php
+            $query = "SELECT valor FROM configuracoes where chave = 'texto_padrao_para_inscricoes' ";
+            $conexao = Conexao::pegarConexao();
+            $resultado = $conexao->query($query);
+
+            $linhas = [];
+
+            if ($resultado) {
+                $linha = $resultado->fetch(PDO::FETCH_ASSOC);
+                if ($linha && isset($linha['valor'])) {
+                    $linhas = preg_split('/\r\n|\r|\n/', $linha['valor']);
+                }
+            }
+            ?>
+
+            <ul>
+                <?php foreach ($linhas as $linha): ?>
+                    <?php if (trim($linha) !== ''): ?>
+                        <li><?= $linha ?></li>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </ul>
 
 
