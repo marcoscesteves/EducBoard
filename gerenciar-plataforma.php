@@ -38,6 +38,17 @@ require_once 'cabecalho.php'; ?>
              <button type="button" class="btn btn-success btn-menu-principal">Mensagem Padrão</button> 
          </a>
   </div>
+
+  <div class="row justify-content-center">
+         
+         <a href="adm-atribuir.php">
+             <button type="button" class="btn btn-success btn-menu-principal">Transformar Adm</button> 
+         </a>
+
+         <a href="#">
+             <button type="button" class="btn btn-success btn-menu-principal"> (em desenv...)</button> 
+         </a>
+  </div>
   
   
             

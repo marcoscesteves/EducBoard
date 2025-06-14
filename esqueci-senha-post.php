@@ -1,49 +1,62 @@
 <?php
 require_once 'classes/aluno.php';
-header('Content-Type: text/html; charset=utf-8');
+require 'src/Exception.php';
+require 'src/PHPMailer.php';
+require 'src/SMTP.php';
 
-$email_remetente = "contato@aprendendocomvideos.com.br";
-$email_destino = $_POST['email'];
-$headers = "MIME-Version: 1.1\n";
-$headers .= "Content-type: text/plain; charset=iso-8859-1\n";
-$headers .= "From: $email_remetente\n"; // remetente
-$headers .= "Return-Path: $email_remetente\n"; // return-path
-$headers .= "Reply-To: $email_destino\n"; // Endereço (devidamente validado) que o seu usuário informou no contato
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-// Checar se o e-mail informado está correto
-
-// Se correto, enviar e-mail com o password;
-
-$aluno = new aluno();
-$linha = $aluno->buscarAluno($_POST['email']);
-
-if ($linha['email'] == $_POST['email']) {
-    
-    $corpoDoEmail = "Prezado, ". $linha['nome']. " ! 
-    Informo que sua nova senha para acesso é: 'mudar123' 
-    Favor alterar para uma nova senha no menu 'Alterar meus dados' ";
-    
-    
-    $envio = mail($email_destino, "Recuperar acesso à plataforma do COASTRO", $corpoDoEmail, $headers, "-f$email_remetente");
-    if ( $envio ){
-        
-        $aluno->alterarSenhaDoAluno($linha['email'],'mudar123');
-        //$_GET['avisoEnvio'] = 'A sua nova senha foi enviada para o e-mail cadastrado';
-        header('Location: index.php?aviso=true');
-    } else {
-        echo "A mensagem não pode ser enviada";
-    }
-    
-} else {
-    
-    echo "Prezado usuário, o e-mail " . $linha['email'] . " não é o e-mail de 
-    um usuário válido!";
+function gerarSenha($tamanho = 8) {
+    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    return substr(str_shuffle(str_repeat($chars, $tamanho)), 0, $tamanho);
 }
 
+header('Content-Type: text/html; charset=utf-8');
 
+$email_destino = $_POST['email'];
+$aluno = new aluno();
+$linha = $aluno->buscarAluno($email_destino);
 
-?>
+if ($linha && isset($linha['email']) && $linha['email'] === $email_destino) {
+    $novaSenha =  gerarSenha(8);
+    $aluno->alterarSenhaDoAluno($linha['email'], $novaSenha);
 
+    $mail = new PHPMailer(true);
 
+    try {
+        // Configurações do servidor SMTP do Gmail
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'meu_email@gmail.com';   // Seu Gmail
+        $mail->Password   = 'xvco xllb zyar xbjh';   // 🔒 Sua senha de app (não a senha normal)
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587;
 
+        // Remetente e destinatário
+        $mail->setFrom('meu_email@gmail.com', 'Plataforma Educacional');
+        $mail->addAddress($linha['email'], $linha['nome']);
 
+        // Conteúdo do e-mail
+        $mail->isHTML(false);
+        $mail->CharSet = 'UTF-8';
+        $mail->Subject = 'Recuperação de Senha - Plataforma Educacional';
+        $mail->Body    = "Prezado(a) {$linha['nome']},
+        Sua nova senha é: {$novaSenha}
+        Recomenda-se alterá-la após o login no menu 'Dados pessoais'.
+        
+        Atenciosamente,
+        Equipe EducBoard";
+
+        $mail->send();
+
+        header('Location: index.php?aviso=true');
+        exit;
+    } catch (Exception $e) {
+        echo "Erro ao enviar e-mail: {$mail->ErrorInfo}";
+    }
+} else {
+    header('Location: esqueci-senha.php?erro=email-nao-encontrado');
+    exit;
+}

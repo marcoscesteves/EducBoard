@@ -6,11 +6,13 @@ button {
     width: 150px;
     margin: 10px;
     height: 150px;
+    opacity: 0.8;
 }
 
 .logoRetangular {
     width: auto;
     height: 150px;
+    opacity: 0.8;
 }
 
 p.aviso-simples {
@@ -61,6 +63,7 @@ a button.btn-menu-principal {
     border: 1px solid white;
     padding: 10px;
     font-size: 20px;
+    opacity: 0.8;
 }
 
 div.topo_cabecalho {
@@ -87,7 +90,7 @@ div.topo_cabecalho_interno p, div.rodape p {
 
 div.topo_cabecalho_interno {
     background-color: #28a745;
-    opacity: 0.5;
+    opacity: 0.8;
     padding: 5px;
     color: white;
     font-size: 20px;
@@ -97,8 +100,7 @@ div.topo_cabecalho_interno {
 
 div.rodape {
     background-color: #28a745;
-    opacity: 0.5;
-    padding: 20px;
+    opacity: 0.8;
     color: white;
     margin-top: 20px;
     
@@ -111,6 +113,13 @@ div.DesabilitarInputEstudantes {
 div.HabilitarInputEstudantes {
     display: block;
 }
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+
 
 @media (max-width: 768px) {
     .logo {

@@ -1,4 +1,4 @@
-<div class="container rodape">
+<div class="container rodape rounded">
     <div class="row d-flex justify-content-center">
            <a href="#">
                <button type="button" class="btn" onclick="history.back()"> <i class="fas fa-chevron-left fa-2x text-light"></i>

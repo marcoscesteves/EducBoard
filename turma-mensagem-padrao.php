@@ -33,7 +33,7 @@ $textoAtual = $linha ? $linha['valor'] : '';
             <label for="valor" class="form-label">Texto padrão que será ofererecido ao aluno antes de confirmar sua inscrição.</label>
             <textarea name="valor" id="valor" class="form-control" rows="10"><?= htmlspecialchars($textoAtual) ?></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" id="btnSalvar">Salvar</button>
+        <button type="submit" class="btn btn-primary btn-success" id="btnSalvar">Salvar</button>
         <span class="text-success ms-3 d-none" id="msgSucesso">Atualização salva</span>
     </form>
 </div>

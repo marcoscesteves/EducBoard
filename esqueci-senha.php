@@ -23,13 +23,12 @@ require_once 'cabecalho.php';
 
        
        
-       <?php if (isset($_GET['erro'])) { ?>
-    
-             <div class="alert alert-danger">
-                <?php echo 'Usuário ou senha inválido.'?> 
-             </div>
-    
-            <?php } ?>    
+    <?php if (isset($_GET['erro']) && $_GET['erro'] === 'email-nao-encontrado') { ?>
+        <div class="alert alert-danger">
+            Prezado usuário, o e-mail cadastrado não consta em nossa base de dados.
+        </div>
+    <?php } ?>
+
        
        <div class="row justify-content-center">
           

@@ -2,6 +2,11 @@
 
 **EducBoard** é um sistema simples e direto para gestão de turmas, professores e alunos, desenvolvido em PHP com MySQL. Ideal para instituições de ensino ou projetos educacionais que precisam organizar inscrições de forma eficiente.
 
+**Bibliotecas utilizadas**
+
+Este projeto utiliza [PHPMailer](https://github.com/PHPMailer/PHPMailer), licenciado sob a MIT License.
+Além disso, utilizamos bootstrap e FontAwesome!
+
 ## 🎥 Demonstração
 
 [![Assista ao vídeo](https://img.youtube.com/vi/IYGEGUccX9E/0.jpg)](https://youtu.be/IYGEGUccX9E)
@@ -108,9 +113,19 @@ EducBoard/
    - Agora é o momento de testar se seu site já está funcionando;
    - Atentar que ao criar o domínio pelo infinityfree demora algumas horas para que o domínio esteja funcionando;
    
+7. Configurando e-mail para envio de e-mails e recuperação de senhas.
+   - O envio de e-mail será realizado usando o elasticEmail
+   - Fique a vontade de usar qualquer outra solução, que deverá ser configurada no formulário esqueci-senha-post.php
+   - Por padrão vamos usar uma conta do gmail para enviar as configurações. Para tal, siga as seguintes etapas:
+      - a) Ative a verificação em duas etapas no seu gmail;
+      - b) Vá em senhar de APPs e cadastre um acesso para um aplicativo (https://myaccount.google.com/apppasswords)
+      - c) A senha gerada será utilizada na página esqueci-senha-post:
+         - Preencher os seguintes campos:
+         i) $mail->Username   = 'educboard@gmail.com';  // Seu Gmail
+            $mail->Password   = 'senha do app criada';  // 🔒 Sua senha de app (não a senha normal)
+            $mail->setFrom('educboard@gmail.com', 'Plataforma Educacional');
+         ii) O conteúdo do e-mail que será enviado pode ser alterado em body.
    
-    
-
 ---
 
 ## 🤝 Contribuindo
