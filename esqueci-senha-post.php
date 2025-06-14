@@ -30,7 +30,7 @@ if ($linha && isset($linha['email']) && $linha['email'] === $email_destino) {
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'meu_email@gmail.com';   // Seu Gmail
-        $mail->Password   = 'xvco xllb zyar xbjh';   // 🔒 Sua senha de app (não a senha normal)
+        $mail->Password   = 'password_app_code';   // 🔒 Sua senha de app (não a senha normal)
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
