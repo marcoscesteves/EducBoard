@@ -104,14 +104,12 @@ EducBoard/
    - Ao entrar no PHPMyAdmin, clique em SQL e cole o conteúdo do arquivo "criar_tabelas.sql" e, em seguida, clique em executar. Neste etapa, atente que arrastar o próprio arquivo para dentro da consulta pode levar a erros; motivo pelo qual, recomenda-se que copie e cole o conteúdo ali;
 
 5. Enviar arquivos para a hospedagem
-   - Clique em Contas (Accounts) entre em sua conta e, em seguida, clique em "File Manager"
-   - Ao entrar no gerenciador de arquivos "File Manager", entrar no diretório htdocs
+   - A forma ideal de se enviar arquivos é por FTP e usando algum programa específico, como, por exemplo, o FileZilla. Não recomendamos o envio através do gerenciador de arquivos padrão disponibilizado pela infinityfree -> em nossos testes, alguns arquivos apresentaram problemas durante o envio;
    - Nesta etapa, enviaremos os arquivos descompactados na etapa 1 acima
    - Ao descompactar o arquivo ZIP, haverá uma pasta chamada EducBoard-main. Selecionar todos os arquivos de dentro desta pasta e enviar para dentro da pasta htdocs;
 
 6. Testes
    - Agora é o momento de testar se seu site já está funcionando;
-   - Atentar que ao criar o domínio pelo infinityfree demora algumas horas para que o domínio esteja funcionando;
    
 7. Configurando e-mail para envio de e-mails e recuperação de senhas.
    - O envio de e-mail será realizado usando o elasticEmail

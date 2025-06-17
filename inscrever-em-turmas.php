@@ -1,5 +1,4 @@
 <?php require 'auto_load.php';
-$titulo = 'Inscrições em Turmas';
 require_once 'cabecalho.php';
  ?>
 

@@ -1,6 +1,5 @@
 <?php include 'auto_load.php'; 
 header('Content-Type: text/html; charset=utf-8');
-$titulo = 'Cadastro de Professor Realizado';
 require_once 'cabecalho.php';
 
 $professor = new professor();

@@ -1,6 +1,5 @@
 <?php 
 require_once 'auto_load.php';
-$titulo = 'COASTRO';
 require_once 'cabecalho.php';
 ?>
    <div class="container">

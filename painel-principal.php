@@ -1,5 +1,4 @@
 <?php require 'auto_load.php'; 
-$titulo = 'Painel Principal';
 require_once 'cabecalho.php' ?>
 
    

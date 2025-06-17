@@ -1,5 +1,4 @@
 <?php require 'auto_load.php'; 
-$titulo = 'Confirmar inscrições';
 require_once 'classes/conexao.php';
 require_once 'cabecalho.php' ?>
 

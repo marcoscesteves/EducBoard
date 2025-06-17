@@ -1,6 +1,5 @@
 <?php require_once 'auto_load.php';
 require_once 'classes/conexao.php'; // use seu arquivo padrão de conexão
-$titulo = 'Editar texto padrão para inscrições';
 require_once 'cabecalho.php';
 
 

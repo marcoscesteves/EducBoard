@@ -1,7 +1,6 @@
 <?php
 require_once 'classes/aluno.php';
 require_once 'classes/turma.php';
-$titulo = 'Criação de turma realizada';
 require_once 'cabecalho.php';
 
 $turma = new Turma(); // Corrigido: T maiúsculo

@@ -14,6 +14,9 @@ function gerarSenha($tamanho = 8) {
 
 header('Content-Type: text/html; charset=utf-8');
 
+$configReceiver = require __DIR__ . '/config/config.php';
+$config = $configReceiver['email']; // Filtrar apenas configurações de e-mail
+
 $email_destino = $_POST['email'];
 $aluno = new aluno();
 $linha = $aluno->buscarAluno($email_destino);
@@ -27,15 +30,14 @@ if ($linha && isset($linha['email']) && $linha['email'] === $email_destino) {
     try {
         // Configurações do servidor SMTP do Gmail
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'meu_email@gmail.com';   // Seu Gmail
-        $mail->Password   = 'password_app_code';   // 🔒 Sua senha de app (não a senha normal)
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
+        $mail->Host       = $config['host'];
+        $mail->SMTPAuth   = $config['SMTPAuth'];
+        $mail->Username   = $config['Username'];
+        $mail->Password   = $config['Password'];
+        $mail->SMTPSecure = $config['SMTPSecure'];
+        $mail->Port       = $config['Port'];
 
-        // Remetente e destinatário
-        $mail->setFrom('meu_email@gmail.com', 'Plataforma Educacional');
+        $mail->setFrom($config['from_email'], $config['from_nome']);
         $mail->addAddress($linha['email'], $linha['nome']);
 
         // Conteúdo do e-mail

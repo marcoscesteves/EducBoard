@@ -1,5 +1,5 @@
 -- Tabela: Alunos
-CREATE TABLE Alunos (
+CREATE TABLE alunos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255),
     email VARCHAR(255),
@@ -13,7 +13,7 @@ CREATE TABLE Alunos (
 );
 
 -- Tabela: Professores
-CREATE TABLE Professores (
+CREATE TABLE professores (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255),
     telefone VARCHAR(20),
@@ -23,7 +23,7 @@ CREATE TABLE Professores (
 
 
 -- Tabela: Turma
-CREATE TABLE Turma (
+CREATE TABLE turma (
     id INT AUTO_INCREMENT PRIMARY KEY,
     data DATE,
     horario VARCHAR(50),
@@ -61,7 +61,7 @@ CREATE TABLE configuracoes (
 );
 
 -- Criando perfil de administrador:
-INSERT INTO Alunos ( nome, email, administrador, senha) 
+INSERT INTO alunos ( nome, email, administrador, senha) 
 VALUES 
 ('Administrador', 'adm@educboard.com', 1, 'YWRt');
 

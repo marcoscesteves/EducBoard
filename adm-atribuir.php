@@ -1,7 +1,6 @@
 <?php
 require_once 'classes/conexao.php';
 require_once 'classes/aluno.php';
-$titulo = 'Gerenciar administradores';
 require_once 'cabecalho.php';
 
 $atualizacaoRealizada = isset($_GET['status']) && $_GET['status'] === 'ok';

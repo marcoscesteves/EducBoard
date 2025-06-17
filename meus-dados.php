@@ -1,6 +1,5 @@
 <?php 
 require_once 'auto_load.php';
-$titulo = 'Novas Inscrições';
 require_once 'cabecalho.php';
 $aluno = new aluno(); 
 $lista = $aluno->buscarAluno($_SESSION["email"]); 

@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <?php 
+
+    // Configurar o título dentro das configurações centralizadas do site (config.php)
+    $config = require __DIR__ . '/config/config.php';
+    $titulo = $config['site']['titulo'];
+
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
     }

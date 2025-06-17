@@ -1,6 +1,5 @@
 <?php 
 require_once 'auto_load.php';
-$titulo = 'EducBoard';
 require_once 'cabecalho.php';
 ?>
 

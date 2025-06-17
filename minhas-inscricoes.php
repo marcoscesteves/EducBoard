@@ -1,5 +1,4 @@
 <?php require 'auto_load.php';
-$titulo = 'Minhas Inscrições';
 require_once 'cabecalho.php'; ?>
   
    <div class="container">

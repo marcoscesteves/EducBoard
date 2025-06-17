@@ -1,6 +1,5 @@
 <?php require_once 'auto_load.php';
 require_once 'classes/conexao.php';
-$titulo = 'Mensagem salva para turmas. ';
 require_once 'cabecalho.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
