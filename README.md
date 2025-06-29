@@ -65,11 +65,8 @@ EducBoard/
 3. **Envie o arquivo do projeto**
    - Faça o upload dos arquivos via FTP (preferencialmente usando filezilla)
 
-3. **Configure a conexão**:
+4. **Configure a conexão**:
    - Edite `classes/conexao.php` com seu usuário, senha e nome do banco
-
-4. **Execute o sistema**:
-   - Coloque o projeto na pasta correta do seu servidor 
 
 5. **Mude a senha do administrador**:
    - Ao executar o script na etapa 2 (criar_tabelas.sql) um usuário de administrador
