@@ -5,6 +5,16 @@
     $config = require __DIR__ . '/config/config.php';
     $titulo = $config['site']['tituloAba'];
     $tituloCabecalho = $config['site']['tituloCabecalho'];
+    // Carregar os parâmetros de localidade/idioma do config.php
+    $lcTime = $config['site']['idioma']['LC_TIME'];
+    $lcNumeric = $config['site']['idioma']['LC_NUMERIC'];
+    $lcMonetary = $config['site']['idioma']['LC_MONETARY'];
+    $lcCtype = $config['site']['idioma']['LC_CTYPE'];
+
+    // Aplicar as configurações de localidade usando os parâmetros de config.php
+    setlocale(LC_TIME, $lcTime, $lcTime, $lcNumeric);
+    setlocale(LC_MONETARY, $lcMonetary, $lcMonetary, $lcNumeric);
+    setlocale(LC_CTYPE, $lcCtype, $lcCtype);
 
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
