@@ -16,26 +16,26 @@ require_once 'cabecalho.php';
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Nome:</span>
                 </div>
-            <input type="text" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="nome" >
+            <input type="text" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="nome" autocomplete="off">
         </div>
 
         <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">E-mail: </span>
                 </div>
-            <input type="email" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="email" required="required">
+            <input type="email" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="email" required="required" autocomplete="off">
         </div>
 
         <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">CPF: </span>
                 </div>
-            <input type="text" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="cpf">
+            <input type="text" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="cpf" autocomplete="off">
         </div>
         
         <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Telefone: </span>
+                    <span class="input-group-text" id="inputGroup-sizing-default" autocomplete="off">Telefone: </span>
                 </div>
             <input type="tel" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="telefone">
         </div>
@@ -60,21 +60,21 @@ require_once 'cabecalho.php';
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Curso: </span>
                 </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="curso">
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="curso" autocomplete="off">
         </div>
         
         <div class="input-group mb-3 DesabilitarInputEstudantes">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Período: </span>
                 </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="periodo">
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="periodo" autocomplete="off">
         </div>
         
         <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Senha: </span>
                 </div>
-            <input type="password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="senha"> 
+            <input type="password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="senha" autocomplete="off"> 
         </div>
         
        

@@ -65,7 +65,7 @@ EducBoard/
 3. **Faça upload dos arquivo do projeto**
    - Faça o upload dos arquivos via FTP (preferencialmente usando filezilla)
 
-4. **Realizar as configurações no arquivo config.php **:
+4. **Realizar as configurações no arquivo config.php**:
 
    - Edite `config/config.php` e configure os nomes/títulos que devem aparecer na aba do navegador e no título do cabecalho. Essas informações aparecem em todas as páginas do site.
     
@@ -114,6 +114,9 @@ EducBoard/
    Caso deseje, é recomendável (mas não obrigatório) manter uma menção ao nosso repositório no rodapé, como forma de agradecimento.
    Para trocar a logo, basta editar o arquivo cabecalho.php.
 
+9. **Habilitar SSL:**
+   - O SSL (Secure Socket Layer) é essencial para garantir a segurança das informações entre o servidor e o navegador, criptografando dados como senhas e informações pessoais, tornando a comunicação mais segura. Recomendo fortemente que seja habilitado em sua hospedagem.
+
 ## Exemplo de configuração na hospedagem gratuita InfinityFree (https://www.infinityfree.com/)
 
 1. Faça o download do site no github do projeto (https://github.com/marcoscesteves/EducBoard)
@@ -139,6 +142,8 @@ EducBoard/
    - Ao descompactar o arquivo ZIP, haverá uma pasta chamada EducBoard-main. Selecionar todos os arquivos de dentro desta pasta e enviar para dentro da pasta htdocs;
 
 6. Realizar as configurações 4 a 7 do tópico "Como Usar" (#Como-Usar)
+
+7. O infinityfree não utiliza SSL para hospedagens gratuitas. Então, utilize apenas para efeitos de testes ou procure um servidor com SSL.
    
    
 ---
