@@ -8,7 +8,7 @@ require_once 'cabecalho.php';
         
         <p class="aviso-simples">As informações abaixo são importantes para gerarmos o seu certificado ao término do curso.</p>
         
-    <form action = "alunos-criar-post.php" method="post" id="cadastroAluno">
+    <form action = "alunos-criar-post.php" method="post" id="cadastroAluno" autocomplete="off">
        
         <input name="operacao" value="inserir" style="display: none;">
         
@@ -16,28 +16,28 @@ require_once 'cabecalho.php';
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Nome:</span>
                 </div>
-            <input type="text" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="nome" autocomplete="off">
+            <input type="text" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="nome" autocomplete="new-name">
         </div>
 
         <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">E-mail: </span>
                 </div>
-            <input type="email" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="email" required="required" autocomplete="off">
+            <input type="email" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="email" required="required" autocomplete="new-email">
         </div>
 
         <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">CPF: </span>
                 </div>
-            <input type="text" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="cpf" autocomplete="off">
+            <input type="text" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="cpf" autocomplete="new-cpf">
         </div>
         
         <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default" autocomplete="off">Telefone: </span>
                 </div>
-            <input type="tel" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="telefone">
+            <input type="tel" required class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="telefone" autocomplete="new-tel">
         </div>
 
         
@@ -60,21 +60,21 @@ require_once 'cabecalho.php';
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Curso: </span>
                 </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="curso" autocomplete="off">
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="curso" autocomplete="new-course">
         </div>
         
         <div class="input-group mb-3 DesabilitarInputEstudantes">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Período: </span>
                 </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="periodo" autocomplete="off">
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="periodo" autocomplete="new-per">
         </div>
         
         <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-default">Senha: </span>
                 </div>
-            <input type="password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="senha" autocomplete="off"> 
+            <input type="password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="senha" autocomplete="new-password"> 
         </div>
         
        
