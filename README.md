@@ -69,23 +69,23 @@ EducBoard/
 
    - Edite `config/config.php` e configure os nomes/títulos que devem aparecer na aba do navegador e no título do cabecalho. Essas informações aparecem em todas as páginas do site.
     
-         // Substitua para os valores de seu projeto: <br>
-         'site' => [ <br>
-            'tituloAba' => '...', // Título que apareçe na aba dos navegador (em todas as páginas) <br>
-            'tituloCabecalho' => '...', // Título que aparece no cabeçalho <br>
-         ], <br>
+         // Substitua para os valores de seu projeto: 
+         'site' => [ 
+            'tituloAba' => '...', // Título que apareçe na aba dos navegador (em todas as páginas)
+            'tituloCabecalho' => '...', // Título que aparece no cabeçalho
+         ],
 
    - Edite `config/config.php` e insira as informações de acesso ao banco de dados, conforme abaixo:
 
-         // 🗃️ Conexão com o banco de dados interno da aplicação  <br>
-         'database' => [  <br>
-            'host' => 'localhost',         -> Inserir host <br>
-            'port' => 3306,                -> Porta de acesso <br>
-            'name' => 'db_name',           -> Nome do banco a ser acessado <br>
-            'user' => 'db_username',       -> usuário para login (acesso) no banco <br>
-            'password' => 'db_password',   -> password para acesso <br>
-            'charset' => 'utf8mb4',        -> Para projetos em português, não altere esta linha <br>
-         ], <br>
+         // 🗃️ Conexão com o banco de dados interno da aplicação  
+         'database' => [  
+            'host' => 'localhost',         -> Inserir host 
+            'port' => 3306,                -> Porta de acesso
+            'name' => 'db_name',           -> Nome do banco a ser acessado 
+            'user' => 'db_username',       -> usuário para login (acesso) no banco 
+            'password' => 'db_password',   -> password para acesso 
+            'charset' => 'utf8mb4',        -> Para projetos em português, não altere esta linha 
+         ], 
 
 
 5. **Mude a senha do administrador**:
