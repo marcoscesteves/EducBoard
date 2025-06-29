@@ -60,7 +60,7 @@ EducBoard/
    - Realize o download ou clone o repositório
 
 2. **Configure o banco de dados**:
-   - Importe o arquivo `banco/criar_tabelas.sql` no phpMyAdmin
+   - Importe o arquivo `config/criar_tabelas.sql` no phpMyAdmin
 
 3. **Faça upload dos arquivo do projeto**
    - Faça o upload dos arquivos via FTP (preferencialmente usando filezilla)
