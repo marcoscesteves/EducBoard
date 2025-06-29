@@ -56,13 +56,14 @@ EducBoard/
 
 ## 🧪 Como Usar
 
-1. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/seu-usuario/educboard.git
-   ```
+1. **Faça o download**:
+   - Realize o download ou clone o repositório
 
 2. **Configure o banco de dados**:
    - Importe o arquivo `banco/criar_tabelas.sql` no phpMyAdmin
+
+3. **Envie o arquivo do projeto**
+   - Faça o upload dos arquivos via FTP (preferencialmente usando filezilla)
 
 3. **Configure a conexão**:
    - Edite `classes/conexao.php` com seu usuário, senha e nome do banco
