@@ -103,7 +103,21 @@ div.rodape {
     opacity: 0.8;
     color: white;
     margin-top: 20px;
-    
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 40px;  
+}
+
+div.rodape p {
+
+    margin: 0; 
+    text-align: center; 
+}
+
+.rodape a {
+    color: #ffffff; 
+    text-decoration: none; 
 }
 
 div.DesabilitarInputEstudantes {

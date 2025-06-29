@@ -75,8 +75,10 @@ require_once 'cabecalho.php';
            </a>
            
        </div>
+       
 
    </div>
+            <?php require_once 'rodape.php'; ?>
    
    </body>
 </html>

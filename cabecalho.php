@@ -3,7 +3,8 @@
 
     // Configurar o título dentro das configurações centralizadas do site (config.php)
     $config = require __DIR__ . '/config/config.php';
-    $titulo = $config['site']['titulo'];
+    $titulo = $config['site']['tituloAba'];
+    $tituloCabecalho = $config['site']['tituloCabecalho'];
 
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
@@ -48,7 +49,7 @@ header("Pragma: no-cache");
    <div class="row">
          
    <div class="topo_cabecalho_interno d-flex justify-content-center rounded">
-      <p>Escola de Exemplo</p>     
+      <p><?php echo $tituloCabecalho ?></p>     
    </div> 
    
     </div>

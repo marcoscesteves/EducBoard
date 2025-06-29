@@ -62,11 +62,31 @@ EducBoard/
 2. **Configure o banco de dados**:
    - Importe o arquivo `banco/criar_tabelas.sql` no phpMyAdmin
 
-3. **Envie o arquivo do projeto**
+3. **Faça upload dos arquivo do projeto**
    - Faça o upload dos arquivos via FTP (preferencialmente usando filezilla)
 
-4. **Configure a conexão**:
-   - Edite `classes/conexao.php` com seu usuário, senha e nome do banco
+4. **Realizar as configurações no arquivo config.php **:
+
+   - Edite `config/config.php` e configure os nomes/títulos que devem aparecer na aba do navegador e no título do cabecalho. Essas informações aparecem em todas as páginas do site.
+    
+    // Substitua para os valores de seu projeto:
+    'site' => [
+        'tituloAba' => '...', // Título que apareçe na aba dos navegador (em todas as páginas)
+        'tituloCabecalho' => '...', // Título que aparece no cabeçalho
+    ],
+
+   - Edite `config/config.php` e insira as informações de acesso ao banco de dados, conforme abaixo:
+
+   // 🗃️ Conexão com o banco de dados interno da aplicação
+    'database' => [
+        'host' => 'localhost',         -> Inserir host
+        'port' => 3306,                -> Porta de acesso
+        'name' => 'db_name',           -> Nome do banco a ser acessado
+        'user' => 'db_username',       -> usuário para login (acesso) no banco
+        'password' => 'db_password',   -> password para acesso
+        'charset' => 'utf8mb4',        -> Para projetos em português, não altere esta linha
+    ],
+
 
 5. **Mude a senha do administrador**:
    - Ao executar o script na etapa 2 (criar_tabelas.sql) um usuário de administrador
@@ -74,10 +94,22 @@ EducBoard/
      e-mail: adm@educboard.com
      senha: adm
 
-6. **Configurar a mesangem de confirmação para os alunos:**
+6. **Configurar a mensagem de confirmação para os alunos:**
    - A mensagem aparece no momento em que o aluno/usuário pretende se inscrever numa turma. A ideia é colocar as regras para a turma ou demais informações que precisam ser oferecidas. Vale ressaltar que essa mensagem é padrão para todas as turmas.
 
-7. **Substituir logo no cabeçalho:**
+7. Configurando e-mail para envio de e-mails e recuperação de senhas.
+   - Fique a vontade de usar qualquer outra solução, que deverá ser configurada no formulário esqueci-senha-post.php
+   - Por padrão vamos usar uma conta do gmail para enviar as configurações. Para tal, siga as seguintes etapas:
+      - a) Ative a verificação em duas etapas no seu gmail;
+      - b) Vá em senhar de APPs e cadastre um acesso para um aplicativo (https://myaccount.google.com/apppasswords)
+      - c) A senha gerada será utilizada na página esqueci-senha-post:
+         - Preencher os seguintes campos:
+         i) $mail->Username   = 'educboard@gmail.com';  // Seu Gmail
+            $mail->Password   = 'senha do app criada';  // 🔒 Sua senha de app (não a senha normal)
+            $mail->setFrom('educboard@gmail.com', 'Plataforma Educacional');
+         ii) O conteúdo do e-mail que será enviado pode ser alterado em body.
+
+8. **Substituir logo no cabeçalho:**
    - A logo exibida no cabeçalho do projeto aparece em todas as páginas da plataforma. Sinta-se à vontade para substituí-la pela logo da sua escola, empresa ou plataforma.
    Caso deseje, é recomendável (mas não obrigatório) manter uma menção ao nosso repositório no rodapé, como forma de agradecimento.
    Para trocar a logo, basta editar o arquivo cabecalho.php.
@@ -106,21 +138,8 @@ EducBoard/
    - Nesta etapa, enviaremos os arquivos descompactados na etapa 1 acima
    - Ao descompactar o arquivo ZIP, haverá uma pasta chamada EducBoard-main. Selecionar todos os arquivos de dentro desta pasta e enviar para dentro da pasta htdocs;
 
-6. Testes
-   - Agora é o momento de testar se seu site já está funcionando;
+6. Realizar as configurações 4 a 7 do tópico "Como Usar" (#Como-Usar)
    
-7. Configurando e-mail para envio de e-mails e recuperação de senhas.
-   - O envio de e-mail será realizado usando o elasticEmail
-   - Fique a vontade de usar qualquer outra solução, que deverá ser configurada no formulário esqueci-senha-post.php
-   - Por padrão vamos usar uma conta do gmail para enviar as configurações. Para tal, siga as seguintes etapas:
-      - a) Ative a verificação em duas etapas no seu gmail;
-      - b) Vá em senhar de APPs e cadastre um acesso para um aplicativo (https://myaccount.google.com/apppasswords)
-      - c) A senha gerada será utilizada na página esqueci-senha-post:
-         - Preencher os seguintes campos:
-         i) $mail->Username   = 'educboard@gmail.com';  // Seu Gmail
-            $mail->Password   = 'senha do app criada';  // 🔒 Sua senha de app (não a senha normal)
-            $mail->setFrom('educboard@gmail.com', 'Plataforma Educacional');
-         ii) O conteúdo do e-mail que será enviado pode ser alterado em body.
    
 ---
 

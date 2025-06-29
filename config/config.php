@@ -4,7 +4,8 @@ return [
 
     // Substitua os dados para o projeto:
     'site' => [
-        'titulo' => 'EducBoard - A sua plataforma educacional'
+        'tituloAba' => 'EducBoard - A sua plataforma educacional', // Título que apareçe na aba dos navegador (em todas as páginas)
+        'tituloCabecalho' => 'EducBoard - A sua plataforma educacional', // Título que aparece no cabeçalho
     ],
 
     // 🗃️ Conexão com o banco de dados interno da aplicação
