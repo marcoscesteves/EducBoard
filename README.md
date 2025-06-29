@@ -69,23 +69,23 @@ EducBoard/
 
    - Edite `config/config.php` e configure os nomes/títulos que devem aparecer na aba do navegador e no título do cabecalho. Essas informações aparecem em todas as páginas do site.
     
-    // Substitua para os valores de seu projeto:
-    'site' => [
-        'tituloAba' => '...', // Título que apareçe na aba dos navegador (em todas as páginas)
-        'tituloCabecalho' => '...', // Título que aparece no cabeçalho
-    ],
+    - // Substitua para os valores de seu projeto:
+    - 'site' => [
+    -    'tituloAba' => '...', // Título que apareçe na aba dos navegador (em todas as páginas)
+    -    'tituloCabecalho' => '...', // Título que aparece no cabeçalho
+    - ],
 
    - Edite `config/config.php` e insira as informações de acesso ao banco de dados, conforme abaixo:
 
-   // 🗃️ Conexão com o banco de dados interno da aplicação
-    'database' => [
-        'host' => 'localhost',         -> Inserir host
-        'port' => 3306,                -> Porta de acesso
-        'name' => 'db_name',           -> Nome do banco a ser acessado
-        'user' => 'db_username',       -> usuário para login (acesso) no banco
-        'password' => 'db_password',   -> password para acesso
-        'charset' => 'utf8mb4',        -> Para projetos em português, não altere esta linha
-    ],
+   - // 🗃️ Conexão com o banco de dados interno da aplicação
+   - 'database' => [
+   -     'host' => 'localhost',         -> Inserir host
+   -     'port' => 3306,                -> Porta de acesso
+   -     'name' => 'db_name',           -> Nome do banco a ser acessado
+   -     'user' => 'db_username',       -> usuário para login (acesso) no banco
+   -     'password' => 'db_password',   -> password para acesso
+   -     'charset' => 'utf8mb4',        -> Para projetos em português, não altere esta linha
+   -  ],
 
 
 5. **Mude a senha do administrador**:
@@ -104,10 +104,10 @@ EducBoard/
       - b) Vá em senhar de APPs e cadastre um acesso para um aplicativo (https://myaccount.google.com/apppasswords)
       - c) A senha gerada será utilizada na página esqueci-senha-post:
          - Preencher os seguintes campos:
-         i) $mail->Username   = 'educboard@gmail.com';  // Seu Gmail
-            $mail->Password   = 'senha do app criada';  // 🔒 Sua senha de app (não a senha normal)
-            $mail->setFrom('educboard@gmail.com', 'Plataforma Educacional');
-         ii) O conteúdo do e-mail que será enviado pode ser alterado em body.
+         - i) $mail->Username   = 'educboard@gmail.com';  // Seu Gmail
+         -   $mail->Password   = 'senha do app criada';  // 🔒 Sua senha de app (não a senha normal)
+         -   $mail->setFrom('educboard@gmail.com', 'Plataforma Educacional');
+         - ii) O conteúdo do e-mail que será enviado pode ser alterado em body.
 
 8. **Substituir logo no cabeçalho:**
    - A logo exibida no cabeçalho do projeto aparece em todas as páginas da plataforma. Sinta-se à vontade para substituí-la pela logo da sua escola, empresa ou plataforma.
